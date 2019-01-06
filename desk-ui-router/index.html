@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的桌面</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<!-- 4. 使用ng-app指定APP -->
+
+<body ng-app="myapp">
+    <!-- ui-sref 触发器 用来触发状态的 后面跟一个要触发的状态 -->
+    <div class="main">
+        <ul>
+            <li ui-sref="desk" class="music">
+                <a href="">
+                    <img src="http://main1.applinzi.com/desk/img/music.png" alt="">
+                    <p class="musicTitle">桌面</p>
+                </a>
+            </li>
+            <!-- music({musicId:1}) 表示触发music的状态 并且传了个参数 {musicId:1} -->
+            <li ui-sref="music({musicId:1})" class="music">
+                <a href="">
+                    <img src="http://main1.applinzi.com/desk/img/music.png" alt="">
+                    <p class="musicTitle">音乐</p>
+                </a>
+            </li>
+            <li ui-sref="picture" class="">
+                <a href="">
+                    <img src="http://main1.applinzi.com/desk/img/picture.png" alt="">
+                    <p class="pictureTitle">相册</p>
+                </a>
+            </li>
+            <li ui-sref="baidu" class="">
+                <a href="">
+                    <img src="http://main1.applinzi.com/desk/img/baidu.png" alt="">
+                    <p class="pictureTitle">百度一下</p>
+                </a>
+            </li>
+            <li ui-sref="link" class="">
+                <a href="">
+                    <img src="http://main1.applinzi.com/desk/img/folder.png" alt="">
+                    <p class="pictureTitle">常用网站</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 5. 在页面上的一个div指定一ui-view  这里面的内容是会随着路由改变而改变 -->
+    <div ui-view=""></div>
+</body>
+<!-- 1.引包 angular主包 -->
+<script src="./js/angular.js"></script>
+<!-- 2.引入ui-router包  相当于angular-rotue-->
+<script src="./js/angular-ui-route.js"></script>
+<!-- 3.引入自己的主入口文件 -->
+<script src="./js/index.js"></script>
+
+</html>

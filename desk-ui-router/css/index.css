@@ -1,0 +1,204 @@
+body,
+th,
+td,
+input,
+select,
+textarea {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    line-height: 26px;
+    font-family: Arial, Microsoft YaHei, 宋体;
+}
+
+p,
+form {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #4c4c4c;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: 0
+}
+
+select {}
+
+h3,
+ol,
+ul,
+dl,
+dt,
+dd,
+p,
+input,
+label {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.clear:after {
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+    height: 0
+}
+
+.clear {
+    zoom: 1
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 16px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+select,
+input,
+button,
+button img,
+label {
+    vertical-align: middle;
+}
+
+input,
+button,
+select,
+img {
+    line-height: normal;
+    margin: 0;
+}
+
+
+/***center***/
+
+.main {
+    background: url(http://main1.applinzi.com/desk/img/desk.jpg)no-repeat;
+    background-size: 100%;
+    color: white;
+    width: 100%;
+    height: 635px;
+    font-size: 12px;
+}
+
+.main img {
+    width: 35px;
+    height: 35px;
+}
+
+.main ul {
+    width: 100%;
+}
+
+.main li {
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.main li:hover {
+    background: rgba(158, 144, 140, 0.4);
+}
+
+.main li p {
+    height: 20px;
+    background: #7c7169;
+    margin: 0 auto;
+    color: white;
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+
+/***qq音乐***/
+
+.container {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    width: 600px;
+    height: 450px;
+}
+
+
+/***图片***/
+
+.container2 {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    width: 700px;
+    height: 500px;
+    background: white;
+    overflow: hidden;
+    overflow: auto
+}
+
+.container2 ul {
+    margin-left: 15px;
+}
+
+.container2 li {
+    float: left;
+    padding: 10px;
+    margin: 15px 3px 3px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    background: #7c7169;
+}
+
+.container2 img {
+    width: 300px;
+    height: 200px;
+}
+
+.container2 li:hover {
+    background: #3cbbf9;
+}
+
+
+/***百度***/
+
+.baiducontainer {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 1000px;
+    height: 500px;
+    background: white;
+    border: 1px solid green;
+}
+
+
+/****常用网址***/
+
+.title {
+    color: blue;
+    text-indent: center;
+    width: 60px;
+    margin: 0 auto;
+}

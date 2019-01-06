@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            display: inline-block;
+            font-size: 12px;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 4px;
+            width: 60px;
+            border-radius: 6px;
+            background-color: #e8eaed;
+            position: relative;
+
+        }
+
+        .box:hover {
+            background-color: #f0f1f3;
+        }
+
+        .leftKey {
+            width: 40px;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: default;
+        }
+
+        .deleteBtn {
+            display: inline-block;
+            position: absolute;
+            top: 2px;
+            right: 0;
+            z-index: 1;
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            margin: 4px 5px;
+            background: url('icon.png') no-repeat;
+            cursor: pointer;
+            background-position: -3px -3px;
+
+        }
+
+        .deleteBtn:hover {
+            background-position: -2px -34px;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="box" >
+        <span class="leftKey" title="我是关键字">我是关键字xxxxxxxxxxxxxx</span>
+        <i class="deleteBtn"></i>
+    </div>
+    <div class="box">
+        <span class="leftKey" title="我是关键字">关键字</span>
+        <i class="deleteBtn"></i>
+    </div>
+    <div class="box">
+        <span class="leftKey" title="我是关键字">我是关键字xxxxxxxxxxxxxx</span>
+        <i class="deleteBtn" ng-click="deleteByKye()"></i>
+    </div>
+    <script src="https://cdn.staticfile.org/angular.js/1.6.6/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', ['$scope', function ($scope) {
+            $scope.deleteByKye = function () {
+             console.log('kkkk')
+             $scope.search()
+            }
+            $scope.search = function(){
+                console.log('p')
+            }
+        }])
+    </script>
+</body>
+
+</html>

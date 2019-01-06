@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <!-- 分类区域 -->
+    <section id="category">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default" ng-repeat="value in categoryTitle.result">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                    	<!-- 注意 bootstrap的特效是通过href连接来关联的 正好会影响路由跳转 -->
+                    	<!-- Bootstrap可以使用data-target代替href -->
+                        <a data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne{{$index}}" aria-expanded="false" aria-controls="collapseOne" class="collapsed" ng-click="getCategory(value.titleId)">
+                          {{value.title}}
+                        
+                        </a>
+                    </h4>
+                </div>
+                <!-- id="collapseOne"  由于id不能重复 所以遍历的时候要给个不充分的ID -->
+                <div id="collapseOne{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4" ng-repeat="item in category.result"><a href="#">{{item.category}}</a></div>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
